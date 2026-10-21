@@ -34,13 +34,3 @@ A customized event calendar for ODYSSEY 2026, featuring event dates, a countdown
 2. Open the project folder in Visual Studio Code.
 3. Open `index.html` in a browser, or use the VS Code Live Server extension.
 4. Keep the `evo-calendar` folder in the same project directory so the calendar assets load correctly.
-
-## Credits and License
-
-This project uses Evo Calendar as its calendar component.
-
-Original project: https://github.com/edlynvillegas/evo-calendar
-
-Please refer to the included `LICENSE` file for the applicable license terms. Original copyright and license notices in reused source files are retained.
-
-The ODYSSEY page design and event content have been customized for the ODYSSEY 2026 event.
