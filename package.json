@@ -1,0 +1,21 @@
+
+{
+  "name": "odyssey-event-calendar",
+  "version": "1.0.0",
+  "description": "ODYSSEY 2026 event calendar with countdown and event details",
+  "main": "evo-calendar/js/evo-calendar.js",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "odyssey",
+    "event-calendar",
+    "jquery",
+    "javascript",
+    "event"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">=1.8.0"
+  }
+}

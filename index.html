@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODYSSEY 2026 | Event Calendar</title>
+
+    <link rel="stylesheet" href="./evo-calendar/css/evo-calendar.min.css">
+    <link rel="stylesheet" href="./evo-calendar/css/evo-calendar.midnight-blue.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #f8fafc;
+            background: #080d1c;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px 40px;
+            background: linear-gradient(135deg, #111936, #33216b, #10172e);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #a78bfa;
+            border-radius: 30px;
+            color: #c4b5fd;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 20px 0 10px;
+            font-size: clamp(38px, 7vw, 68px);
+            letter-spacing: 4px;
+        }
+
+        h1 span {
+            color: #a78bfa;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .location {
+            margin-top: 20px;
+            color: #e9d5ff;
+        }
+
+        .countdown-section {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 18px;
+            text-align: center;
+        }
+
+        .countdown-section h2 {
+            font-size: 24px;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .time-box {
+            padding: 20px 8px;
+            border: 1px solid #34345e;
+            border-radius: 14px;
+            background: #151b32;
+        }
+
+        .time-box strong {
+            display: block;
+            color: #c4b5fd;
+            font-size: clamp(25px, 5vw, 40px);
+        }
+
+        .time-box span {
+            display: block;
+            margin-top: 8px;
+            color: #aab4cc;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .calendar-section {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 18px;
+        }
+
+        .section-heading {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .section-description {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #aab4cc;
+            line-height: 1.6;
+        }
+
+        #calendar {
+            color: #222;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .event-notes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .event-card {
+            padding: 20px;
+            border: 1px solid #303854;
+            border-radius: 14px;
+            background: #121a30;
+        }
+
+        .event-card h3 {
+            margin-top: 0;
+            color: #c4b5fd;
+        }
+
+        .event-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .status {
+            color: #86efac !important;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 25px 15px;
+            border-top: 1px solid #252d46;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            .countdown {
+                gap: 7px;
+            }
+
+            .time-box {
+                padding: 15px 4px;
+            }
+
+            .event-notes {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-section {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="tag">E-CELL PRESENTS</div>
+        <h1>ODY<span>SSEY</span> 2026</h1>
+        <p class="subtitle">
+            Think Bold. Build Smart. Create the Future.
+        </p>
+        <p class="location">📍 CV Raman Hall</p>
+        <p class="subtitle">October 29 – 30, 2026</p>
+    </header>
+
+    <section class="countdown-section">
+        <h2 id="countdown-title">Countdown to ODYSSEY</h2>
+
+        <div class="countdown">
+            <div class="time-box">
+                <strong id="days">00</strong>
+                <span>DAYS</span>
+            </div>
+            <div class="time-box">
+                <strong id="hours">00</strong>
+                <span>HOURS</span>
+            </div>
+            <div class="time-box">
+                <strong id="minutes">00</strong>
+                <span>MINUTES</span>
+            </div>
+            <div class="time-box">
+                <strong id="seconds">00</strong>
+                <span>SECONDS</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="calendar-section">
+        <h2 class="section-heading">Event Calendar</h2>
+        <p class="section-description">
+            Explore our events and important dates for October 2026.
+            Select a highlighted date to view its details.
+        </p>
+
+        <div id="calendar"></div>
+
+        <div class="event-notes">
+            <article class="event-card">
+                <h3>🎯 E-Expo</h3>
+                <p><strong>October 16, 2026</strong></p>
+                <p>Our E-Expo event has been completed.</p>
+                <p class="status">✓ Completed</p>
+            </article>
+
+            <article class="event-card">
+                <h3>🚀 ODYSSEY — Day 1</h3>
+                <p><strong>October 29, 2026</strong></p>
+                <p>Day 1 of the ODYSSEY entrepreneurship event.</p>
+                <p>📍 CV Raman Hall</p>
+            </article>
+
+            <article class="event-card">
+                <h3>✨ ODYSSEY — Day 2</h3>
+                <p><strong>October 30, 2026</strong></p>
+                <p>Day 2 of ODYSSEY. Continue the challenge and bring your ideas to life.</p>
+                <p>📍 CV Raman Hall</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        ODYSSEY 2026 · E-Cell · Ideas into Action
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="./evo-calendar/js/evo-calendar.min.js"></script>
+
+    <script>
+        const events = [
+            {
+                id: "e-expo-2026",
+                name: "E-Expo",
+                description: "E-Expo event completed on October 16, 2026.",
+                date: "10/16/2026",
+                type: "event",
+                color: "#808080"
+            },
+            {
+                id: "odyssey-day-1",
+                name: "ODYSSEY - Day 1",
+                description: "ODYSSEY Day 1 at CV Raman Hall.",
+                date: "10/29/2026",
+                type: "event",
+                color: "#8b5cf6"
+            },
+            {
+                id: "odyssey-day-2",
+                name: "ODYSSEY - Day 2",
+                description: "ODYSSEY Day 2 at CV Raman Hall.",
+                date: "10/30/2026",
+                type: "event",
+                color: "#8b5cf6"
+            }
+        ];
+
+        $(document).ready(function () {
+            $("#calendar").evoCalendar({
+                theme: "Midnight Blue",
+                titleFormat: "MM yyyy",
+                calendarEvents: events
+            });
+
+            // Show October 2026 when the calendar loads.
+            $("#calendar").evoCalendar("selectMonth", 9);
+            $("#calendar").evoCalendar("selectYear", 2026);
+        });
+
+        // Countdown to October 29, 2026 at 10:00 AM India time.
+        const eventStart = new Date("2026-10-29T10:00:00+05:30").getTime();
+
+        function updateCountdown() {
+            const now = Date.now();
+            let difference = eventStart - now;
+
+            if (difference <= 0) {
+                document.getElementById("countdown-title").textContent =
+                    "ODYSSEY 2026 has started!";
+
+                difference = 0;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((difference / (1000 * 60)) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
